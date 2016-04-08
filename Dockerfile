@@ -12,7 +12,9 @@ RUN mkdir /opt/ansible/
 RUN git clone http://github.com/ansible/ansible.git /opt/ansible/ansible
 WORKDIR /opt/ansible/ansible
 RUN git submodule update --init
-ENV PATH /opt/ansible/ansible/bin:/bin:/usr/bin:/sbin:/usr/sbin ENV PYTHONPATH /opt/ansible/ansible/lib ENV ANSIBLE_LIBRARY /opt/ansible/ansible/library
+ENV PATH /opt/ansible/ansible/bin:/bin:/usr/bin:/sbin:/usr/sbin 
+ENV PYTHONPATH /opt/ansible/ansible/lib 
+ENV ANSIBLE_LIBRARY /opt/ansible/ansible/library
 
 USER ms 
 CMD [ -f /ms/config ] && . /ms/config ; java $MS_JAVA_OPTS -jar "/ms/${MS_JAR_NAME}"
