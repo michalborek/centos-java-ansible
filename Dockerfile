@@ -1,4 +1,4 @@
-FROM michalborek/centos-java
+FROM michalborek/centos-java:openjdk
 MAINTAINER Michal Borek <michal@greenpath.pl>
 
 USER root
