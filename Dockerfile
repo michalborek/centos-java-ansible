@@ -1,4 +1,4 @@
-FROM michalborek/centos-java:microservice
+FROM greenpath/centos-java:microservice
 MAINTAINER Michal Borek <michal@greenpath.pl>
 
 USER root
