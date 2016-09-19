@@ -1,4 +1,4 @@
-FROM michalborek/centos-java:jboss-base
+FROM michalborek/centos-java:microservice
 MAINTAINER Michal Borek <michal@greenpath.pl>
 
 USER root
@@ -19,4 +19,3 @@ ENV PYTHONPATH /opt/ansible/ansible/lib
 ENV ANSIBLE_LIBRARY /opt/ansible/ansible/library
 
 USER ms 
-CMD [ -f /ms/config ] && . /ms/config ; java $MS_JAVA_OPTS -jar "/ms/${MS_JAR_NAME}"
