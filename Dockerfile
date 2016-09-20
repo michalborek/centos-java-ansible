@@ -3,10 +3,10 @@ MAINTAINER Michal Borek <michal@greenpath.pl>
 
 USER root
 
-RUN yum clean all && \
-    yum -y install epel-release && \
+RUN yum -y install epel-release && \
     yum -y install sshpass && \
-    yum -y install PyYAML python-jinja2 python-httplib2 python-keyczar python-paramiko python-setuptools git python-pip
+    yum -y install PyYAML python-jinja2 python-httplib2 python-keyczar python-paramiko python-setuptools git python-pip && \
+    yum clean all
 RUN mkdir /etc/ansible/
 RUN echo '[local]\nlocalhost\n' > /etc/ansible/hosts
 RUN mkdir /opt/ansible/
